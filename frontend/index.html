@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ice tea tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Track your daily ice tea consumption" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- For Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="ice tea track" />
+
+    <!-- iPhone icon -->
+    <link rel="apple-touch-icon" href="/icons/bottle.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/frontend/icons/bottle.png"
+    />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/bottle.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/bottle.png" />
+
+    <!-- manifest.json link-->
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Greeting Section -->
+      <div class="greeting-section">
+        <h1 class="greeting">good morning, jayme</h1>
+      </div>
+
+      <!-- Drink Selection Section-->
+      <form action="/backend/submit" method="post">
+        <div class="drinks-section">
+          <h6 class="drink-task">select your drink</h6>
+          <div class="drinks-list">
+            <label class="drink-item">
+              <input type="radio" name="drink" value="bottle" />
+              <img
+                class="drink-img"
+                id="bottle"
+                src="/frontend/icons/bottle.png"
+                alt="fuze bottle"
+              />
+              <p class="drink-name">bottle</p>
+            </label>
+
+            <label class="drink-item">
+              <input type="radio" name="drink" value="can" />
+              <img
+                class="drink-img"
+                id="can"
+                src="/frontend/icons/can.png"
+                alt="fuze bottle"
+              />
+              <p class="drink-name">can</p>
+            </label>
+
+            <label class="drink-item">
+              <input type="radio" name="drink" value="carton" />
+              <img
+                class="drink-img"
+                id="carton"
+                src="/frontend/icons/carton.png"
+                alt="fuze bottle"
+              />
+              <p class="drink-name">carton</p>
+            </label>
+
+            <label class="drink-item">
+              <input type="radio" name="drink" value="juice-box" />
+              <img
+                class="drink-img"
+                id="juice-box"
+                src="/frontend/icons/juice-box.png"
+                alt="fuze bottle"
+              />
+              <p class="drink-name">juice box</p>
+            </label>
+
+            <div class="fountain-drink">
+              <label class="drink-item">
+                <input type="radio" name="drink" value="fountain-small" />
+                <img
+                  class="drink-img"
+                  id="fountain-small"
+                  src="/frontend/icons/fountain-drink.png"
+                  alt="fuze bottle"
+                />
+                <p class="drink-name">fountain small</p>
+              </label>
+
+
+              <label class="drink-item">
+                <input type="radio" name="drink" value="fountain-medium" />
+                <img
+                  class="drink-img"
+                  id="fountain-medium"
+                  src="/frontend/icons/fountain-drink.png"
+                  alt="fuze bottle"
+                />
+                <p class="drink-name">fountain medium</p>
+              </label>
+
+              <label class="drink-item">
+                <input type="radio" name="drink" value="fountain-large" />
+                <img
+                  class="drink-img"
+                  id="fountain-large"
+                  src="/frontend/icons/fountain-drink.png"
+                  alt="fuze bottle"
+                />
+                <p class="drink-name">fountain large</p>
+              </label>
+            </div>
+        </div>
+
+        <!-- Drink Review Section -->
+        <div class="review-section">
+          <div class="review-message">
+            <h6 class="review-task">leave your thoughts</h6>
+            <textarea
+              class="review-input"
+              name="review"
+              placeholder="where did you drink this ice tea? who were you with?"
+              maxlength="500"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Counter Section -->
+        <div class="counter-section">
+          <h6 class="counter-message">this will be ice tea number</h6>
+          <p class="counter-amount">1</p>
+        </div>
+
+        <div class="submit-section">
+          <div class="submit-btns">
+            <button class="clear-btn" type="reset">clear</button>
+            <button class="submit-btn" type="submit">submit</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <div class="nav-item active">
+          <div class="nav-icon home-icon">
+            <img src="icons/home.png" alt="home icon" />
+          </div>
+          <span class="nav-label">home</span>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">
+            <img src="icons/layer.png" alt="home icon" />
+          </div>
+          <span class="nav-label">logs</span>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">
+            <img src="icons/graph.png" alt="home icon" />
+          </div>
+          <span class="nav-label">stats</span>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">
+            <img src="icons/user.png" alt="home icon" />
+          </div>
+          <span class="nav-label">profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

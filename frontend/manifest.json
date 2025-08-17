@@ -1,0 +1,21 @@
+{
+  "name": "Ice Tea Tracker",
+  "short_name": "tea tracker",
+  "start_url": "/index.html?homescreen=1",
+  "orientation": "portrait",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/icons/bottle.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/bottle.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
