@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(180deg, #74ebd5 0%, #acb6e5 100%);
+  min-height: 100vh;
+  color: #000;
+}
+
+/* App Container */
+.app-container {
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(180deg, #74ebd5 0%, #acb6e5 100%);
+}
+
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30%;
+}
+
+#phone-form {
+  padding-top: 20%;
+}
+
+.message {
+  font-size: 0.5em;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.submit-btn {
+  width: 90px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: #1c2833;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  -webkit-backdrop-filter: blur(20px);
+  -webkit-tap-highlight-color: transparent;
+}
+
+#code-form {
+  padding-top: 20%;
+}
