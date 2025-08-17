@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ice Tea Tracker
 
 A beautiful, mobile-first web app for tracking daily ice tea consumption. Designed specifically for iPhone Safari with "Add to Home Screen" functionality.
@@ -81,3 +82,6 @@ frontend/
 - Add to Home Screen
 - App-like experience
 - Local data storage 
+=======
+ice tea tracker project 
+>>>>>>> 709c0f1950bac30fc71823f952783f452d45d15a
