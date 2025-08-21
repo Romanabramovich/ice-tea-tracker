@@ -15,7 +15,7 @@ import { firebaseConfig } from "./config.js";
 
 // simple gate (keep if you want)
 if (localStorage.getItem("isAuthenticated") !== "true") {
-  location.href = "landing.html";
+  location.href = "index.html";
 }
 
 const app = initializeApp(firebaseConfig);

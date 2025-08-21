@@ -3,7 +3,7 @@
 const CACHE_NAME = "tea-tracker-v1";
 const urlsToCache = [
   "/",
-  "/landing.html",
+  "/index.html",
   "/form.css",
   "/form.css",
   "/landing.css",
