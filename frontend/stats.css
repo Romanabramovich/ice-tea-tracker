@@ -1,0 +1,169 @@
+.app-container {
+  padding: 20px;
+  overflow-y: hidden;
+}
+/* Stats Dashboard Styles */
+.dashboard-title {
+  font-size: 1em;
+  color: #1c2833;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+/* Period Selector */
+.stat-label {
+  display: flex;
+  justify-content: center;
+}
+
+.period-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.period-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.period-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Main Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-top: 5%;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card.primary {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.stat-card.secondary {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+.stat-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.stat-content {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Additional Stats */
+.additional-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 12%;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 75%;
+  height: 75%;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stat-row:last-child {
+  margin-bottom: 0;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-label-small {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .stats-dashboard {
+    padding: 15px;
+  }
+
+  .dashboard-title {
+    font-size: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+
+  .stat-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

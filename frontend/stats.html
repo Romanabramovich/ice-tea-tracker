@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ice tea tracker — stats</title>
+
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="stats.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Track your daily ice tea consumption" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- iOS bits you already use -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="ice tea track" />
+
+    <link rel="apple-touch-icon" href="icons/bottle.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/bottle.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/bottle.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/bottle.png" />
+
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Stats Dashboard -->
+      <div class="stats-dashboard">
+        <h1 class="dashboard-title">your ice tea stats</h1>
+
+        <!-- Main Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card primary">
+            <div class="stat-label">monthly drinks</div>
+            <div class="stat-content">
+              <div class="stat-number" id="month-drink-count">0</div>
+            </div>
+          </div>
+
+          <div class="stat-card secondary">
+            <div class="stat-label">monthly volume in mL</div>
+            <div class="stat-content">
+              <div class="stat-number" id="month-total-volume">0</div>
+            </div>
+          </div>
+
+          <div class="stat-card primary">
+            <div class="stat-label">yearly drinks</div>
+            <div class="stat-content">
+              <div class="stat-number" id="year-drink-count">0</div>
+            </div>
+          </div>
+
+          <div class="stat-card secondary">
+            <div class="stat-label">yearly volume in mL</div>
+            <div class="stat-content">
+              <div class="stat-number" id="year-total-volume">0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Favorite (current month) -->
+        <div class="additional-stats">
+          <div class="stat-row">
+            <div class="stat-item">
+              <div class="stat-label-small">favorite drink (this month)</div>
+              <div class="stat-value favorite-wrap">
+                <img
+                  id="month-favorite-img"
+                  alt="favorite drink"
+                  style="display: none; width: 24px; height: 24px"
+                />
+                <span id="month-favorite-name">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <a class="nav-item" href="./form.html">
+          <div class="nav-icon home-icon">
+            <img src="icons/home.png" alt="home" />
+          </div>
+          <span class="nav-label">home</span>
+        </a>
+
+        <a class="nav-item" href="./logs.html">
+          <div class="nav-icon">
+            <img src="icons/layer.png" alt="logs" />
+          </div>
+          <span class="nav-label">logs</span>
+        </a>
+
+        <a class="nav-item active" href="./stats.html" aria-current="page">
+          <div class="nav-icon">
+            <img src="icons/graph.png" alt="stats" />
+          </div>
+          <span class="nav-label">stats</span>
+        </a>
+
+        <a class="nav-item" href="./profile.html">
+          <div class="nav-icon">
+            <img src="icons/user.png" alt="profile" />
+          </div>
+          <span class="nav-label">profile</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Only the stats script here -->
+    <script type="module" src="stats.js"></script>
+  </body>
+</html>
