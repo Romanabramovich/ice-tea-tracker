@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ice tea tracker</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Track your daily ice tea consumption" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- For Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="ice tea track" />
+
+    <!-- iPhone icon -->
+    <link rel="apple-touch-icon" href="/icons/bottle.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/frontend/icons/bottle.png"
+    />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/bottle.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/bottle.png" />
+
+    <!-- manifest.json link-->
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <a class="nav-item" href="./form.html">
+          <div class="nav-item" active>
+            <div class="nav-icon home-icon">
+              <img src="icons/home.png" alt="home icon" />
+            </div>
+            <span class="nav-label">home</span>
+          </div>
+        </a>
+
+        <a class="nav-item" href="./logs.html">
+          <div class="nav-item">
+            <div class="nav-icon">
+              <img src="icons/layer.png" alt="home icon" />
+            </div>
+            <span class="nav-label">logs</span>
+          </div>
+        </a>
+
+        <a class="nav-item" href="./stats.html">
+          <div class="nav-item">
+            <div class="nav-icon">
+              <img src="icons/graph.png" alt="home icon" />
+            </div>
+            <span class="nav-label">stats</span>
+          </div>
+        </a>
+
+        <a class="nav-item" href="./profile.html" aria-current="page">
+          <div class="nav-item">
+            <div class="nav-icon">
+              <img src="icons/user.png" alt="home icon" />
+            </div>
+            <span class="nav-label">profile</span>
+          </div>
+        </a>
+      </nav>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
