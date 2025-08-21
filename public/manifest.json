@@ -1,7 +1,7 @@
 {
   "name": "Ice Tea Tracker",
   "short_name": "tea tracker",
-  "start_url": "./landing.html?homescreen=1",
+  "start_url": "./index.html?homescreen=1",
   "scope": "/",
   "orientation": "portrait",
   "display": "standalone",
