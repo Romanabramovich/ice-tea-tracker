@@ -1,0 +1,91 @@
+/* Logs Container Styles */
+.logs-container {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.logs-message {
+  font-size: 1em;
+  color: #1c2833;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+/* Logs Table Styles */
+.logs-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.log-entry {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-height: 110px;
+}
+
+.log-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Date Header */
+.log-date {
+  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+  color: #1c2833;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Log Content */
+.log-content {
+  padding: 16px;
+}
+
+/* Drink Info Row */
+.drink-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.drink-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.drink-volume {
+  font-size: 10px;
+  font-weight: 600;
+  color: #2c3e50;
+  background: rgba(116, 235, 213, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid rgba(116, 235, 213, 0.3);
+}
+
+/* Log Message */
+.log-message {
+  font-size: 10px;
+  color: #34495e;
+  line-height: 1.4;
+  font-weight: bold;
+  padding: 2px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 8px;
+  text-transform: lowercase;
+}
