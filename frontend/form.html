@@ -30,17 +30,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/bottle.png" />
 
     <!-- manifest.json link-->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" >
   </head>
   <body>
     <div class="app-container">
       <!-- Greeting Section -->
       <div class="greeting-section">
-        <h1 class="greeting">good morning, jayme</h1>
+        <h1 class="greeting">, jayme</h1>
       </div>
 
       <!-- Drink Selection Section-->
-      <form action="/backend/submit" method="post">
+      <form id="tea-form">
         <div class="drinks-section">
           <h6 class="drink-task">select your drink</h6>
           <div class="drinks-list">
@@ -142,7 +142,7 @@
         <!-- Counter Section -->
         <div class="counter-section">
           <h6 class="counter-message">this will be ice tea number</h6>
-          <p class="counter-amount">1</p>
+          <p class="counter-amount" id="counter">1</p>
         </div>
 
         <div class="submit-section">
@@ -153,35 +153,46 @@
         </div>
       </form>
 
-      <!-- Bottom Navigation -->
+       <!-- Bottom Navigation -->
       <nav class="bottom-nav">
-        <div class="nav-item active">
-          <div class="nav-icon home-icon">
-            <img src="icons/home.png" alt="home icon" />
+        <a class="nav-item" href="./form.html" aria-current="page">
+          <div class="nav-item" active>
+            <div class="nav-icon home-icon">
+              <img src="icons/home.png" alt="home icon" />
+            </div>
+            <span class="nav-label">home</span>
           </div>
-          <span class="nav-label">home</span>
-        </div>
-        <div class="nav-item">
-          <div class="nav-icon">
-            <img src="icons/layer.png" alt="home icon" />
+        </a>
+
+        <a class="nav-item" href="./logs.html">
+          <div class="nav-item">
+            <div class="nav-icon">
+              <img src="icons/layer.png" alt="home icon" />
+            </div>
+            <span class="nav-label">logs</span>
           </div>
-          <span class="nav-label">logs</span>
-        </div>
-        <div class="nav-item">
-          <div class="nav-icon">
-            <img src="icons/graph.png" alt="home icon" />
+        </a>
+
+        <a class="nav-item" href="./stats.html">
+          <div class="nav-item ">
+            <div class="nav-icon">
+              <img src="icons/graph.png" alt="home icon" />
+            </div>
+            <span class="nav-label">stats</span>
           </div>
-          <span class="nav-label">stats</span>
-        </div>
-        <div class="nav-item">
-          <div class="nav-icon">
-            <img src="icons/user.png" alt="home icon" />
+        </a>
+
+        <a class="nav-item" href="./profile.html">
+          <div class="nav-item">
+            <div class="nav-icon">
+              <img src="icons/user.png" alt="home icon" />
+            </div>
+            <span class="nav-label">profile</span>
           </div>
-          <span class="nav-label">profile</span>
-        </div>
+        </a>
       </nav>
     </div>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

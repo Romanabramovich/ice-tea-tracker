@@ -5,16 +5,24 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 body {
+  width: 100%;
+  max-width: none;
+  height: 100vh;
   font-family: "Open Sans";
   font-size: 22px;
   font-weight: bold;
   background: linear-gradient(180deg, #74ebd5 0%, #acb6e5 100%);
-  min-height: 100vh;
+  min-height: 1vh;
   color: #000;
-}
-
-/* App Container */
+} /* App Container */
 .app-container {
   max-width: 375px;
   margin: 0 auto;
@@ -23,29 +31,23 @@ body {
   flex-direction: column;
   position: relative;
   background: linear-gradient(180deg, #74ebd5 0%, #acb6e5 100%);
-}
-
-/* Greeting Section */
+} /* Greeting Section */
 .greeting-section {
-  padding: 60px 20px 20px 20px;
+  padding: 40px 20px 20px 20px;
   text-align: left;
 }
-
 .greeting {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: #1c2833;
   margin: 0;
-}
-/* Drink Selection Section */
+} /* Drink Selection Section */
 .drinks-section {
   padding: 10px 20px 20px 20px;
 }
-
 input[type="radio"] {
   display: none;
 }
-
 input[type="radio"]:checked + .drink-img {
   border: 3px solid #4caf50;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
@@ -61,17 +63,15 @@ input[type="radio"]:checked + .drink-img {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  row-gap: 10px;
+  row-gap: 5px;
   column-gap: 45px;
 }
-
 .drink-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
-
 .drink-img {
   width: 50px;
   height: 50px;
@@ -80,54 +80,45 @@ input[type="radio"]:checked + .drink-img {
   font-size: 0.4em;
   gap: 5%;
 }
-
 .fountain-drink {
   flex: 0 0 100%;
   display: flex;
   justify-content: space-around;
   gap: 30px;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
-
 .review-task {
   display: flex;
   padding-left: 30%;
   padding-bottom: 5%;
 }
-
 .review-message {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 30px;
+  padding: 20px 0;
 }
-
 /* Counter Section */
 .counter-section {
-  padding: 10px 20px 20px 20px;
+  padding: 0px 20px 20px 0;
 }
-
 .counter-message {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5%;
+  padding: 10% 10%;
 }
-
 .counter-amount {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 10%;
   font-size: 1.5em;
 }
-
 /* Review Section*/
 .review-section {
-  padding: 10px 20px 20px 20px;
+  padding: 0px 20px 0px 0;
 }
-
 .submit-btns {
   display: flex;
   flex-direction: row;
@@ -135,8 +126,6 @@ input[type="radio"]:checked + .drink-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5%;
-  margin-bottom: 50px;
 }
 .submit-btn {
   width: 90px;
@@ -158,7 +147,6 @@ input[type="radio"]:checked + .drink-img {
   -webkit-backdrop-filter: blur(20px);
   -webkit-tap-highlight-color: transparent;
 }
-
 .clear-btn {
   width: 90px;
   height: 50px;
@@ -179,22 +167,25 @@ input[type="radio"]:checked + .drink-img {
   -webkit-backdrop-filter: blur(20px);
   -webkit-tap-highlight-color: transparent;
 }
-
 /* Bottom Navigation */
 .bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  width: auto; /* ignore parent width */
+  padding: 10px 0; /* no left/right padding */
   background: #e8e4f0;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding: 15px 0 35px 0;
-  margin: 0;
-  position: sticky;
-  bottom: 0;
-  border-radius: 30px 30px 0 0;
+  justify-content: space-evenly;
+  border-radius: 0px; /* edge-to-edge means no rounded corners */
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
-
 .nav-item {
   display: flex;
   flex-direction: column;
@@ -204,74 +195,28 @@ input[type="radio"]:checked + .drink-img {
   transition: opacity 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
-
 .nav-item:active {
   opacity: 0.7;
+  font-weight: bold;
 }
-
 .nav-item.active {
   opacity: 1;
 }
-
 .nav-item:not(.active) {
   opacity: 0.6;
 }
-
 .nav-icon {
   font-size: 20px;
   color: #4a4a4a;
 }
-
 .nav-icon img {
   width: 20px;
   height: 20px;
   object-fit: contain;
 }
-
 .nav-label {
   font-size: 12px;
   color: #4a4a4a;
   font-weight: bold;
   text-transform: lowercase;
-}
-
-/* iPhone-specific adjustments */
-@supports (-webkit-touch-callout: none) {
-  .app-container {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  .bottom-nav {
-    padding-bottom: calc(35px + env(safe-area-inset-bottom));
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 375px) {
-  .app-container {
-    max-width: 100%;
-  }
-
-  .action-btn {
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
-  }
-
-  .reset-btn {
-    width: 100px;
-    height: 45px;
-  }
-}
-
-/* Animation for button interactions */
-.action-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.action-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
