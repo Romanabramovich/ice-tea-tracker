@@ -70,3 +70,103 @@ body {
 #code-form {
   padding-top: 20%;
 }
+
+/* Form styling */
+.input {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input label {
+  display: block;
+  font-size: 16px;
+  color: #1c2833;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.input input {
+  width: 250px;
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #1c2833;
+  font-size: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.input input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.input input.valid {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.input input.error {
+  border-color: #f44336;
+  background: rgba(244, 67, 54, 0.1);
+}
+
+/* reCAPTCHA container */
+#recaptcha-container {
+  margin: 10px 0;
+}
+
+/* Error messages */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Hidden class */
+.hidden {
+  display: none !important;
+}
+
+/* Sign in message */
+.sign-in-message {
+  font-size: 20px;
+  color: #1c2833;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.phone-message {
+  font-size: 16px;
+  color: #1c2833;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Button states */
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit-btn:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+  .input input {
+    width: 220px;
+  }
+  
+  .sign-in-container {
+    padding-top: 25%;
+  }
+}

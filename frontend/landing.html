@@ -30,50 +30,31 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/bottle.png" />
 
     <!-- manifest.json link-->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
     <div class="app-container">
       <div class="sign-in-container">
-        <h5 class="sign-in-message">sign in with your phone</h5>
+        <h5 class="sign-in-message">whose the best boyfriend ever?</h5>
 
-        <!-- Step 1: Enter phone number (E.164 format, e.g., +14165550123) -->
-        <form id="phone-form">
+        <form id="login-form">
           <div class="input">
-            <label class="phone-message" for="phone">phone number</label>
+            <label for="password">your guess</label>
             <input
-              id="phone"
-              type="tel"
-              placeholder="+1 416 555 0123"
-              required
-            />
-            <!-- reCAPTCHA mounts here (can be invisible) -->
-            <div id="recaptcha-container"></div>
-          </div>
-          <div class="submit">
-            <button class="submit-btn" type="submit">send sms code</button>
-          </div>
-        </form>
-
-        <!-- Step 2: Enter the SMS code you received -->
-        <form id="code-form" class="hidden">
-          <div class="input">
-            <label for="code">verification code</label>
-            <input
-              id="code"
-              inputmode="numeric"
-              autocomplete="one-time-code"
-              maxlength="6"
+              id="password"
+              type="password"
+              placeholder="hmm.. take your best shot"
               required
             />
           </div>
           <div class="submit">
-            <button class="submit-btn" type="submit">verify & sign in</button>
+            <button type="submit" class="submit-btn">final answer</button>
           </div>
         </form>
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <!-- Authentication script -->
+    <script type="module" src="auth.js"></script>
   </body>
 </html>
