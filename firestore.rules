@@ -2,18 +2,21 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
+    
+    // Keep your secret in a single doc:
+    // /meta/auth { secret: "MY_SUPER_SECRET_KEY" }
+    match /meta/{docId} {
+      allow read, write: if false; // nobody can touch or read meta
+    }
 
-    // This rule allows anyone with your Firestore database reference to view, edit,
-    // and delete all data in your Firestore database. It is useful for getting
-    // started, but it is configured to expire after 30 days because it
-    // leaves your app open to attackers. At that time, all client
-    // requests to your Firestore database will be denied.
-    //
-    // Make sure to write security rules for your app before that time, or else
-    // all client requests to your Firestore database will be denied until you Update
-    // your rules
-    match /{document=**} {
-      allow read, write: if true;
+    match /iceTea/{docId} {
+      // Allow create only if request carries the correct secret
+      allow create: if request.resource.data.secret ==
+        get(/databases/$(database)/documents/meta/auth).data.secret;
+
+      // Allow read, update, delete only if the stored doc has the correct secret
+      allow read, update, delete: if resource.data.secret ==
+        get(/databases/$(database)/documents/meta/auth).data.secret;
     }
   }
 }
