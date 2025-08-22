@@ -1,6 +1,7 @@
 // app.js
 // Fix Firebase SDK "process is not defined" error in browser
-window.process = { env: {} };
+window.process = window.process || {};
+window.process.env = window.process.env || {};
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
