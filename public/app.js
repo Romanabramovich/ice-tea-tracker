@@ -25,7 +25,7 @@ const db = getFirestore(app);
 const form = document.getElementById("tea-form");
 const teaCounter = document.getElementById("counter");
 const greeting = document.querySelector(".greeting");
-setGreeting(greeting);
+//setGreeting(greeting);
 
 // Map drink -> volume (mL)
 const VOLUME = {
