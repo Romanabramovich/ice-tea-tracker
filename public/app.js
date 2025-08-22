@@ -1,4 +1,7 @@
 // app.js
+// Fix Firebase SDK "process is not defined" error in browser
+window.process = { env: {} };
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
   getFirestore,
@@ -20,7 +23,7 @@ if (localStorage.getItem("isAuthenticated") !== "true") {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const SECRET = "roman"; 
+const SECRET = "roman";
 
 // ---- DOM
 const form = document.getElementById("tea-form");
@@ -52,8 +55,10 @@ async function updateCounter() {
     const { start, end } = monthRange();
     const col = collection(db, "iceTea");
     const q = query(col, where("ts", ">=", start), where("ts", "<", end));
-    const agg = await getCountFromServer(q);
-    const count = agg.data().count || 0;
+
+    const snap = await getDocs(q);
+    const count = snap.size || 0;
+
     teaCounter.textContent = String(count + 1);
   } catch (error) {
     console.error("counter error:", error);
@@ -92,7 +97,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     form.reset();
-    updateCounter(); 
+    updateCounter();
   } catch (error) {
     console.error("add error:", error);
     alert("could not save your entry (check console)");
