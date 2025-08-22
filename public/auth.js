@@ -1,9 +1,8 @@
 document.getElementById("login-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const input = document.getElementById("password").value.trim();
-  const correct = "roman";
 
-  if (input === correct) {
+  if (input === process.env.PASSWORD) {
     localStorage.setItem("isAuthenticated", "true");
     window.location.href = "form.html";
   } else {
