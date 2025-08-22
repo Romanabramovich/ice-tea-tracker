@@ -27,15 +27,6 @@ const teaCounter = document.getElementById("counter");
 const greeting = document.querySelector(".greeting");
 setGreeting(greeting);
 
-//greeting selector
-function setGreeting(el) {
-  const h = new Date().getHours();
-  let msg = "good night";
-  if (h >= 5 && h < 12) msg = "good morning";
-  else if (h >= 12 && h < 18) msg = "good afternoon";
-  else if (h >= 18 && h < 22) msg = "good evening";
-  el.textContent = msg + ", jayme";
-}
 // Map drink -> volume (mL)
 const VOLUME = {
   bottle: 500,
