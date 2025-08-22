@@ -87,6 +87,7 @@ form.addEventListener("submit", async (e) => {
       volume,
       review,
       ts: serverTimestamp(),
+      secret: process.env.API_KEY
     });
 
     form.reset();
