@@ -92,7 +92,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     form.reset();
-    updateCounter(); // reflect the next number after saving
+    updateCounter(); 
   } catch (error) {
     console.error("add error:", error);
     alert("could not save your entry (check console)");
