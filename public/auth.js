@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 document.getElementById("login-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const input = document.getElementById("password").value.trim();
