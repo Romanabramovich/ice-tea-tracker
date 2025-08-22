@@ -20,6 +20,7 @@ if (localStorage.getItem("isAuthenticated") !== "true") {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const SECRET = "roman"; 
 
 // ---- DOM
 const form = document.getElementById("tea-form");
@@ -87,7 +88,7 @@ form.addEventListener("submit", async (e) => {
       volume,
       review,
       ts: serverTimestamp(),
-      secret: process.env.API_KEY
+      secret: SECRET,
     });
 
     form.reset();
