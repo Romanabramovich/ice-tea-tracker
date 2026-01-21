@@ -4,6 +4,7 @@
   <head>
     <title>ice tea tracker</title>
     <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="profile.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open Sans"
       rel="stylesheet"
@@ -30,6 +31,28 @@
   </head>
   <body>
     <div class="app-container">
+      <div class="profile-container">
+        <h6 class="profile-message">ice tea wrapped</h6>
+        
+        <div class="year-selector">
+          <button id="prev-year" class="year-btn" aria-label="Previous year">
+            <span>←</span>
+          </button>
+          <h2 id="current-year" class="year-display">2026</h2>
+          <button id="next-year" class="year-btn" aria-label="Next year">
+            <span>→</span>
+          </button>
+        </div>
+        
+        <div class="calendar-container">
+          <table class="month-calendar">
+            <tbody id="calendar-body">
+              <!-- Will be populated by profile.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- Bottom Navigation -->
       <nav class="bottom-nav">
         <a class="nav-item" href="./form.html">
@@ -70,6 +93,6 @@
       </nav>
     </div>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="profile.js"></script>
   </body>
 </html>
