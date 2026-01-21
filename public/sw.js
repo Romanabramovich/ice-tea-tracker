@@ -1,13 +1,24 @@
 // Service Worker for Tea Tracker PWA
 
-const CACHE_NAME = "tea-tracker-v1";
+const CACHE_NAME = "tea-tracker-v2";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/form.css",
+  "/form.html",
+  "/logs.html",
+  "/stats.html",
+  "/profile.html",
   "/form.css",
   "/landing.css",
+  "/logs.css",
+  "/stats.css",
+  "/profile.css",
   "/app.js",
+  "/appScript.js",
+  "/logs.js",
+  "/stats.js",
+  "/profile.js",
+  "/auth.js",
   "/manifest.json",
 ];
 
