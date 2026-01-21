@@ -31,6 +31,7 @@ let allData = []; // Cache all data
 const yearDisplay = document.getElementById("current-year");
 const prevYearBtn = document.getElementById("prev-year");
 const nextYearBtn = document.getElementById("next-year");
+const yearlyCountEl = document.getElementById("yearly-count");
 
 async function fetchAllData() {
   try {
@@ -55,11 +56,13 @@ async function fetchAllData() {
 function updateCalendar() {
   // Count entries per month for selected year
   const monthlyCounts = new Array(12).fill(0);
+  let yearlyTotal = 0;
 
   allData.forEach((entry) => {
     if (entry.date.getFullYear() === selectedYear) {
       const month = entry.date.getMonth(); // 0-11
       monthlyCounts[month]++;
+      yearlyTotal++;
     }
   });
 
@@ -93,6 +96,9 @@ function updateCalendar() {
 
   // Update year display
   yearDisplay.textContent = selectedYear;
+  
+  // Update yearly total
+  yearlyCountEl.textContent = yearlyTotal;
   
   // Update button states
   const currentYear = new Date().getFullYear();

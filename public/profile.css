@@ -81,6 +81,41 @@
   padding: 10px;
 }
 
+/* Yearly Total */
+.yearly-total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.total-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c2833;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+.total-count {
+  font-size: 16px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Month Calendar Table */
 .month-calendar {
   width: 100%;
@@ -141,5 +176,18 @@
   
   .month-count {
     font-size: 18px;
+  }
+  
+  .yearly-total {
+    max-width: 250px;
+    padding: 12px;
+  }
+  
+  .total-label {
+    font-size: 14px;
+  }
+  
+  .total-count {
+    font-size: 14px;
   }
 }
